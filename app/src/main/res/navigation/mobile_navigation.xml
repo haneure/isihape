@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="id.ac.umn.isihape.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_patients"
+        android:name="id.ac.umn.isihape.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_patients" />
+
+    <fragment
+        android:id="@+id/nav_appointments"
+        android:name="id.ac.umn.isihape.ui.qrcode.QRCodeFragment"
+        android:label="QR Code"
+        tools:layout="@layout/fragment_qrcode" />
+
+    <fragment
+        android:id="@+id/nav_antrian"
+        android:name="id.ac.umn.isihape.ui.antrian.AntrianFragment"
+        android:label="QR Code"
+        tools:layout="@layout/fragment_antrian" />
+
+    <fragment
+        android:id="@+id/nav_doctors"
+        android:name="id.ac.umn.isihape.ui.doctors.DoctorsFragment"
+        android:label="Doctors"
+        tools:layout="@layout/doctors_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_lab"
+        android:name="id.ac.umn.isihape.ui.lab.LabFragment"
+        android:label="Pemeriksaan Lab"
+        tools:layout="@layout/fragment_lab" />
+
+    <fragment
+        android:id="@+id/nav_help"
+        android:name="id.ac.umn.isihape.ui.help.HelpFragment"
+        android:label="Help"
+        tools:layout="@layout/help" />
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:name="id.ac.umn.isihape.ui.logout.LogoutFragment"
+        android:label="Logout"
+        tools:layout="@layout/doctors_slideshow" />
+</navigation>

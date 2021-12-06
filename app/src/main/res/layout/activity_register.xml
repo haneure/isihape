@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPage">
+
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <EditText
+        android:id="@+id/register_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:hint="Email. . ."
+        android:inputType="textEmailAddress"
+        android:background="@drawable/inputs"
+        android:padding="4dp"
+        android:drawableStart="@drawable/email"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"/>
+
+    <EditText
+        android:id="@+id/register_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/register_email"
+        android:hint="Password. . ."
+        android:inputType="textPassword"
+        android:background="@drawable/inputs"
+        android:padding="4dp"
+        android:drawableStart="@drawable/password"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"/>
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_password"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginBottom="0dp">
+        <RadioButton android:id="@+id/radio_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:layout_margin="15dp"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_dokter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dokter"
+            android:layout_margin="15dp"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@drawable/buttons"
+        android:padding="4dp"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/already_have_an_account_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/register_button"
+        android:layout_centerHorizontal="true"
+        android:text="Already have an account?"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="23dp"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        />
+
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginStart="31dp"-->
+<!--        android:layout_marginEnd="32dp"-->
+<!--        android:layout_below="@id/already_have_an_account_link"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/namaLengkap"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:hint="Nama Lengkap"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                app:layout_constraintVertical_bias="0.064" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/NIK"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:hint="NIK"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/namaLengkap"-->
+<!--                app:layout_constraintVertical_bias="0.03" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/tempatLahir"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:hint="Tempat lahir"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/NIK"-->
+<!--                app:layout_constraintVertical_bias="0.037" />-->
+
+<!--            &lt;!&ndash;    <EditText&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:id="@+id/tanggalLahir"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_height="50dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_marginLeft="20dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:layout_marginRight="20dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:clickable="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:cursorVisible="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:focusable="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:focusableInTouchMode="false"&ndash;&gt;-->
+<!--            &lt;!&ndash;        android:hint="Tanggal lahir"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintTop_toBottomOf="@id/tempatLahir"&ndash;&gt;-->
+<!--            &lt;!&ndash;        app:layout_constraintVertical_bias="0.037" />&ndash;&gt;-->
+
+<!--            <DatePicker-->
+<!--                android:id="@+id/tanggalLahir"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:layout_marginBottom="20dp"-->
+<!--                android:datePickerMode="spinner"-->
+<!--                android:calendarViewShown="false"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.492"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tempatLahir"-->
+<!--                app:layout_constraintVertical_bias="0.043" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/alamat"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:hint="Alamat"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tanggalLahir"-->
+<!--                app:layout_constraintVertical_bias="0.055" />-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/asuransi"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:hint="Asuransi"-->
+<!--                android:textColorHint="@color/white"-->
+<!--                android:calendarTextColor="@color/white"-->
+<!--                android:dayOfWeekBackground="@color/white"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                app:layout_constraintLeft_toLeftOf="parent"-->
+<!--                app:layout_constraintRight_toRightOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/alamat"-->
+<!--                app:layout_constraintVertical_bias="0.055" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+
+</RelativeLayout>

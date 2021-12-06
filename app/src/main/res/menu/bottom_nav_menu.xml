@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/list"
+        android:title="Appointments" />
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/stethoscope"
+        android:title="Doctors" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/flask"
+        android:title="Lab" />
+
+    <item
+        android:id="@+id/navigation_live_antrian"
+        android:icon="@drawable/queue"
+        android:title="Live Antrian" />
+
+    <item
+        android:id="@+id/navigation_qrcode"
+        android:icon="@drawable/qrcode"
+        android:title="QR Code" />
+
+</menu>
