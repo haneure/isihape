@@ -1,7 +1,12 @@
 # isihape
 An app for Medical Institution such as Hospital to manage their data. Including functionality for Admin, Doctors, Labs, and Patients management.
 
+# File Structure
+<img src="images/StrukturFile.png" height="400">
+
 # Preview
+
+## Normal User
 <p align="center">
 <img src="images/Initial%20Page.png" height="400">
 
@@ -20,6 +25,10 @@ An app for Medical Institution such as Hospital to manage their data. Including 
 <img src="images/Buat%20Janji.png" height="400">
 
 <img src="images/Appointment%20Doctors.png" height="400">
+</p>
 
-<img src="images/CRUD%20Admin.png" height="400">
+## Admin
+<p align="center">
+  <img src="images/CRUD%20Admin.png" height="400">
+  <img src="images/CRUD%20Admin%202.png" height="400">
 </p>
