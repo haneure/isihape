@@ -1,5 +1,5 @@
 # isihape
-An app for Medical Institution such as Hospital to manage their data. Including Admin, Doctors, Labs, and Patients.
+An app for Medical Institution such as Hospital to manage their data. Including functionality for Admin, Doctors, Labs, and Patients management.
 
 # Preview
 <p align="center">
